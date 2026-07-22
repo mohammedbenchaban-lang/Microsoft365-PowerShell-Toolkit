@@ -1,0 +1,10 @@
+# Runtime-generated logs and reports (keep folder structure via .gitkeep)
+Logs/*.log
+Reports/*_2*.csv
+
+# PowerShell
+*.ps1xml
+
+# OS files
+.DS_Store
+Thumbs.db
