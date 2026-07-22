@@ -1,0 +1,4 @@
+DisplayName,UserPrincipalName,Mail,AccountEnabled,Department,JobTitle
+Jane Doe,jane.doe@contoso.com,jane.doe@contoso.com,True,IT,Support Engineer
+John Smith,john.smith@contoso.com,john.smith@contoso.com,True,Sales,Account Manager
+Maria Garcia,maria.garcia@contoso.com,maria.garcia@contoso.com,False,HR,HR Specialist
