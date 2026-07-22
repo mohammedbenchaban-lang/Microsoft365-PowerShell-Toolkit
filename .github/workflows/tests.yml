@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pester
+        shell: pwsh
+        run: Install-Module -Name Pester -Force -Scope CurrentUser -SkipPublisherCheck
+
+      - name: Run Pester tests
+        shell: pwsh
+        run: |
+          $config = New-PesterConfiguration
+          $config.Run.Path = "./Tests"
+          $config.Run.Exit = $true
+          $config.Output.Verbosity = "Detailed"
+          if (Test-Path "./Tests") {
+            Invoke-Pester -Configuration $config
+          } else {
+            Write-Host "No Tests directory found yet; skipping."
+          }
