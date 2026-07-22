@@ -1,0 +1,4 @@
+UserPrincipalName,IsMfaRegistered,IsMfaCapable,IsPasswordlessCapable
+jane.doe@contoso.com,True,True,False
+john.smith@contoso.com,False,False,False
+maria.garcia@contoso.com,True,True,True
